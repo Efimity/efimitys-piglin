@@ -1,0 +1,23 @@
+{
+    "type": "origins:simple",
+    "name": "§rGolden Motivation",
+    "description": "Other armors are fancy and all but Golden Armor feels just right, it fills you with motivation.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Golden Armor:                                       ",
+                "extra": [
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+6% Movement Speed per Golden Armor piece worn"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

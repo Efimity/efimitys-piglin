@@ -1,0 +1,19 @@
+{
+	"name": "§6Hoarder",
+	"description": "Must hoard it all, all must be mine.",
+	"icon": {
+		"item": "minecraft:golden_pickaxe"
+	},
+	"impact": 0,
+	"powers": [
+		"efimity:piglin/variant/hoarder/midas_touch",
+		"efimity:piglin/variant/hoarder/armor_speed",
+		"efimity:piglin/variant/hoarder/bloodlust",
+		"efimity:piglin/variant/hoarder/bartering",
+		"efimity:piglin/variant/hoarder/crossbow",
+		"efimity:piglin/variant/hoarder/flabby",
+		"efimity:piglin/variant/hoarder/zombify",
+		"efimity:piglin/variant/hoarder/second_chance",
+		"efimity:piglin/variant/hoarder/sounds"
+	]
+}

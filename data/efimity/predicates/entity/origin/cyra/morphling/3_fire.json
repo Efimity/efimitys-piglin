@@ -1,0 +1,5 @@
+{
+    "condition": "origins:origin",
+    "origin": "cyra:morphling/3_fire",
+    "layer": "origins:origin"
+}

@@ -1,0 +1,9 @@
+{
+    "order": 0,
+    "entity_types": [
+        "minecraft:player"
+    ],
+    "powers": [
+        "efimity:piglin/_global/heirlooms"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "condition": "inverted",
+    "term": {
+        "condition": "minecraft:any_of",
+        "terms": [
+            {
+                "condition": "minecraft:reference",
+                "name": "efimity:entity/origins-classes/rogue"
+            },
+            {
+                "condition": "minecraft:reference",
+                "name": "efimity:entity/flags/is_sneaking"
+            },
+            {
+                "condition": "minecraft:reference",
+                "name": "efimity:entity/flags/has_invisible_effect"
+            },
+            {
+                "condition": "minecraft:reference",
+                "name": "efimity:entity/gamemode/single/spectator"
+            }
+        ]
+    }
+}

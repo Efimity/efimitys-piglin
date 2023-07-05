@@ -1,0 +1,42 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{Piglin: {heirloom: {piglin_crown:1b}}}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Piglin Crown",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "A Crown that used to hold immense power",
+                "color": "gold",
+                "italic": false,
+                "bold": false
+            }
+        ],
+        "replace": true
+    },
+    {
+        "function": "minecraft:enchant_with_levels",
+        "levels": {
+            "min": 30,
+            "max": 50
+        },
+        "treasure": false
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "efimity:piglin/items/rare_barters/piglin_crown",
+        "slot": "head",
+        "hidden": true
+    }
+]

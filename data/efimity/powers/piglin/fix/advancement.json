@@ -1,0 +1,59 @@
+{
+    "type": "origins:action_on_callback",
+    "hidden": true,
+    "entity_action_added": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:advancement",
+            "advancement": "efimity:piglin/root",
+            "inverted": true
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:grant_advancement",
+                    "advancement": "efimity:piglin/root"
+                },
+                {
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            "action": {
+                                "type": "origins:grant_advancement",
+                                "advancement": "efimity:piglin/hoarder/root"
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/brute/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            "action": {
+                                "type": "origins:grant_advancement",
+                                "advancement": "efimity:piglin/brute/root"
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/zombie",
+                                "layer": "efimity:variant"
+                            },
+                            "action": {
+                                "type": "origins:grant_advancement",
+                                "advancement": "efimity:piglin/zombie/root"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

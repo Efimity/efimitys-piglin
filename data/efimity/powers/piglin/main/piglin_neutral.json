@@ -1,0 +1,8 @@
+{
+    "type": "extraorigins:mob_neutrality",
+    "name": "Piglin Neutrality",
+    "description": "Piglins do not attack you unless provoked.\nBrutes will still attack you on sight.",
+    "entity_types": [
+        "piglin"
+    ]
+}

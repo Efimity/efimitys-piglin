@@ -1,0 +1,5 @@
+{
+    "condition": "origins:origin",
+    "origin": "cyra:morphling/7_combined/variant/fire",
+    "layer": "efimity:variant"
+}

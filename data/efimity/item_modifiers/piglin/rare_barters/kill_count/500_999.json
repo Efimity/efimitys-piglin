@@ -1,0 +1,31 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "This is the second-worst thing to happen to these orphans",
+                "color": "#FF0000",
+                "italic": false,
+                "bold": false
+            },
+            [
+                {
+                    "text": "Sacrifices: ",
+                    "color": "#DF3C3C",
+                    "bold": false,
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "@s",
+                        "objective": "blood_axe_kill_count"
+                    },
+                    "color": "#DF3C3C",
+                    "italic": false
+                }
+            ]
+        ],
+        "replace": true
+    }
+]

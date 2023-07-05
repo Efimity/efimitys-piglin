@@ -1,0 +1,47 @@
+{
+	"name": "Piglin",
+	"description": "You are a Piglin who decided to separate themselves from other Piglins.",
+	"icon": {
+		"item": "minecraft:gold_ingot"
+	},
+	"impact": 3,
+	"powers": [
+		"efimity:piglin/main/switch",
+		"efimity:piglin/main/smith",
+		"efimity:piglin/main/all_that_glitters",
+		"efimity:piglin/main/need_for_gold",
+		"efimity:piglin/main/weapons",
+		"efimity:piglin/main/can_harvest",
+		"efimity:piglin/main/health",
+		"origins:nether_spawn",
+		"efimity:piglin/main/piglin_neutral",
+		"efimity:piglin/main/tooltips",
+
+		"efimity:piglin/main/variant_desc/main",
+
+		"efimity:piglin/main/variant_desc/hoarder/main",
+		"efimity:piglin/main/variant_desc/hoarder/midas_touch",
+		"efimity:piglin/main/variant_desc/hoarder/armor_speed",
+		"efimity:piglin/main/variant_desc/hoarder/bloodlust",
+		"efimity:piglin/main/variant_desc/hoarder/bartering",
+		"efimity:piglin/main/variant_desc/hoarder/crossbow",
+		"efimity:piglin/main/variant_desc/hoarder/flabby",
+		"efimity:piglin/main/variant_desc/hoarder/zombify",
+		"efimity:piglin/main/variant_desc/hoarder/second_chance",
+
+		"efimity:piglin/main/variant_desc/brute/main",
+		"efimity:piglin/main/variant_desc/brute/brutified",
+		"efimity:piglin/main/variant_desc/brute/bloodlust",
+		"efimity:piglin/main/variant_desc/brute/armor_speed",
+		"efimity:piglin/main/variant_desc/brute/flabby",
+		"efimity:piglin/main/variant_desc/brute/zombify",
+		"efimity:piglin/main/variant_desc/brute/second_chance",
+
+		"efimity:piglin/main/variant_desc/zombie/main",
+		"efimity:piglin/main/variant_desc/zombie/undead",
+		"efimity:piglin/main/variant_desc/zombie/carnivore",
+		"efimity:piglin/main/variant_desc/zombie/healing",
+
+		"efimity:piglin/fix/advancement"
+	]
+}

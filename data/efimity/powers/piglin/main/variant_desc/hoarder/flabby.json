@@ -1,0 +1,24 @@
+{
+	"type": "origins:simple",
+	"name": "§rFlabby",
+	"description": "Your body is flabby, you have less hearts.",
+	"badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+                {
+                    "text": "Flabby Attributes:                                           ",
+                    "bold": false,
+                    "underlined": false
+                },
+                {
+                    "text": "\n-4 Max Health                                              ",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "red"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,284 @@
+{
+    "type": "origins:multiple",
+    "hidden": false,
+    "name": "Midas' Touch",
+    "description": "Unbreaking Enchantment lets you use the golden tools and weapons to their fullest potential without the worry of breaking them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Midas' Touch Tools:                                      ",
+                "extra": [
+                    {
+                        "text": "\nUnbreaking:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+33% Mining Speed increase per level"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Midas' Touch Weapons:                                      ",
+                "extra": [
+                    {
+                        "text": "\nUnbreaking:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+5% Attack Speed increase per level"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "weapon_speed_1": {
+		"type": "origins:modify_attribute",
+		"condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_weapons"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                ]
+            }
+		},
+		"attribute": "minecraft:generic.attack_speed",
+		"modifiers": [
+			{
+                "operation": "multiply_base",
+                "value": 0.05
+			}
+		]
+    },
+    "weapon_speed_2": {
+		"type": "origins:modify_attribute",
+		"condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_weapons"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 2
+                    }
+                ]
+            }
+		},
+		"attribute": "minecraft:generic.attack_speed",
+		"modifiers": [
+			{
+                "operation": "multiply_base",
+                "value": 0.1
+			}
+		]
+    },
+    "weapon_speed_3": {
+		"type": "origins:modify_attribute",
+		"condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_weapons"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 3
+                    }
+                ]
+            }
+		},
+		"attribute": "minecraft:generic.attack_speed",
+		"modifiers": [
+			{
+                "operation": "multiply_base",
+                "value": 0.15
+			}
+		]
+    },
+    "weapon_speed_4": {
+		"type": "origins:modify_attribute",
+		"condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_weapons"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 4
+                    }
+                ]
+            }
+		},
+		"attribute": "minecraft:generic.attack_speed",
+		"modifiers": [
+			{
+                "operation": "multiply_base",
+                "value": 0.2
+			}
+		]
+    },
+    "tool_speed_1": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_tools"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                ]
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.33
+        }
+    },
+    "tool_speed_2": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_tools"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 2
+                    }
+                ]
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.66
+        }
+    },
+    "tool_speed_3": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_tools"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 3
+                    }
+                ]
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.99
+        }
+    },
+    "tool_speed_4": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "efimity:piglin/golden_tools"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 4
+                    }
+                ]
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1.33
+        }
+    }
+}

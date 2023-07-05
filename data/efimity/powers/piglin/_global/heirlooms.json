@@ -1,0 +1,15 @@
+{
+    "type": "origins:tooltip",
+    "hidden": true,
+    "order": 100,
+    "item_condition": {
+        "type": "origins:nbt",
+        "nbt": "{Piglin:{heirloom:{}}}"
+    },
+    "texts": [
+        {
+            "text": "Piglin Heirloom",
+            "color": "red"
+        }
+    ]
+}

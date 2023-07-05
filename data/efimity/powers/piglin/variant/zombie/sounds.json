@@ -1,0 +1,108 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "hurt_normal": {
+        "type": "apugli:custom_hurt_sound",
+        "muted": false,
+        "sound": "minecraft:entity.zombified_piglin.hurt",
+        "volume": 1,
+        "pitch": 1,
+        "condition": {
+            "type": "origins:relative_health",
+            "comparison": ">",
+            "compare_to": 0.5
+        }
+    },
+    "hurt_low": {
+        "type": "apugli:custom_hurt_sound",
+        "muted": false,
+        "sound": "minecraft:entity.zombified_piglin.hurt",
+        "volume": 0.9,
+        "pitch": 0.7,
+        "condition": {
+            "type": "origins:relative_health",
+            "comparison": "<=",
+            "compare_to": 0.5
+        }
+    },
+    "death": {
+        "type": "apugli:custom_death_sound",
+        "muted": false,
+        "sound": "minecraft:entity.zombified_piglin.death",
+        "volume": 1,
+        "pitch": 1
+    },
+    "step": {
+        "type": "apugli:custom_footstep",
+        "muted": false,
+        "sound": "minecraft:entity.zombie.step",
+        "volume": 0.2,
+        "pitch": 1
+    },
+    "spawn": {
+        "type": "origins:action_on_callback",
+        "entity_action_added": {
+            "type": "origins:delay",
+            "ticks": 5,
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:predicate",
+                    "predicate": "efimity:entity/sounds/can_play/ambient"
+                },
+                "if_action": {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:relative_health",
+                        "comparison": "<=",
+                        "compare_to": 0.5
+                    },
+                    "if_action": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.zombified_piglin.ambient",
+                        "volume": 0.9,
+                        "pitch": 0.7
+                    },
+                    "else_action": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.zombified_piglin.ambient",
+                        "volume": 1,
+                        "pitch": 1
+                    }
+                }
+            }
+        }
+    },
+    "ambient": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "condition": {
+            "type": "origins:predicate",
+            "predicate": "efimity:entity/sounds/can_play/ambient"
+        },
+        "entity_action": {
+            "type": "origins:chance",
+            "chance": 0.1,
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:relative_health",
+                    "comparison": "<=",
+                    "compare_to": 0.5
+                },
+                "if_action": {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombified_piglin.ambient",
+                    "volume": 0.9,
+                    "pitch": 0.7
+                },
+                "else_action": {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombified_piglin.ambient",
+                    "volume": 1,
+                    "pitch": 1
+                }
+            }
+        }
+    }
+}

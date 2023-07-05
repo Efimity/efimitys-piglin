@@ -1,0 +1,110 @@
+{
+    "name":"Homesick",
+    "description": "You body is not used to being outside of Nether, you will start to slowly zombify if you have no mean of preservation from it. Golden Foods known to have magical healing properties, which can help you preserve your form temporarily, but no matter what your body will be effected, you will exhaust a lot more while away from home.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Effects of being away from Nether:",
+                "extra": [
+                    {
+                        "text": "",
+                        "color": "red",
+                        "extra": [
+                            "\nExhaust twice as fast",
+                            "\nExhaust passively but this exhaustion won't cause you to starve"
+                        ]
+                    },
+                    {
+                        "text": "",
+                        "color": "yellow",
+                        "extra": [
+                            "\nWill Zombify in 5 Minutes without Preservation"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Golden Food Preservation:",
+                "extra": [
+                    {
+                        "text": "\nWhile preserved you will slowly heal any zombification and won't zombify outside of Nether, Preservation timer only ticks down if you are outside of Nether and while healing Zombification.",
+                        "color": "green"
+                    },
+                    {
+                        "text": "\nGolden Carrot:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives +2 Minutes and 8 Seconds of Preservation up to 8 Minutes and 30 Seconds"
+                        ]
+                    },
+                    {
+                        "text": "\nGolden Apple:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives +4 Minutes and 16 Seconds of Preservation up to 30 Minutes",
+                            "\nHeals a bit of Zombification Instantly"
+                        ]
+                    },
+                    {
+                        "text": "\nEnchanted Golden Apple:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives 30 Minutes of Preservation",
+                            "\nCompletely Heals Zombification"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "type": "origins:modify_exhaustion",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "efimity:piglin/variant/hoarder",
+                        "layer": "efimity:variant"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "efimity:piglin/variant/brute",
+                        "layer": "efimity:variant"
+                    }
+                ]
+            },
+            {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_nether",
+                "inverted": true
+            }
+        ]
+    },
+    "modifiers": [
+        {
+            "operation": "multiply_base_additive",
+            "value": 1
+        }
+    ]
+}

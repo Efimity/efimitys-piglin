@@ -1,0 +1,54 @@
+[
+    {
+        "function": "minecraft:set_enchantments",
+        "enchantments": {
+            "minecraft:sharpness": 5
+        }
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Blood Axe",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "Kill for me, Kill for the Blood God",
+                "color": "#FF0000",
+                "italic": false,
+                "bold": false
+            },
+            [
+                {
+                    "text": "Sacrifices: ",
+                    "color": "#DF3C3C",
+                    "bold": false,
+                    "italic": false
+                },
+                {
+                    "text": "0",
+                    "color": "#DF3C3C",
+                    "bold": false,
+                    "italic": false
+                }
+            ]
+        ],
+        "replace": true
+    },
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{Piglin: {heirloom: {blood_axe:1b}}, KillCount:0b, Unbreakable: 1b}"
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "efimity:piglin/items/rare_barters/blood_axe",
+        "slot": "mainhand",
+        "hidden": true
+    }
+]

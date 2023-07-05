@@ -1,0 +1,210 @@
+{
+    "type": "origins:multiple",
+    "hidden": false,
+    "name": "Golden Axe",
+    "description": "Your bloodlust, this weapon is the materialized form of your rage. You must feed it. More blood, more power.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Golden Axe:                                      ",
+                "extra": [
+                    {
+                        "text": "\nUnbreaking:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+5% Attack Speed increase per level"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Damaging entities with Golden Axe feeds your Bloodlust depending on the Damage you deal:",
+                "extra": [
+                    {
+                        "text": "\nBrute Bloodlust Effects:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+0%-25% Attack Damage",
+                            "\n+0%-25% Movement Speed"
+                        ]
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nAt Minimum Bloodlust turn back into Hoarder form"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "speed": {
+        "type": "origins:modify_attribute",
+        "attribute": "minecraft:generic.movement_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base_additive",
+                "value": 0,
+                "resource": "efimity:piglin/main/switch_bloodlust",
+                "modifier": {
+                    "operation": "multiply_base_additive",
+                    "value": -0.9999900794
+                }
+            }
+        ]
+    },
+    "attack_damage": {
+        "type": "origins:modify_attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "modifiers": [
+            {
+                "operation": "multiply_total_multiplicative",
+                "value": 0,
+                "resource": "efimity:piglin/main/switch_bloodlust",
+                "modifier": {
+                    "operation": "multiply_base_additive",
+                    "value": -0.9999900794
+                }
+            }
+        ]
+    },
+    "axe_speed_1": {
+        "type": "origins:modify_attribute",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_axe"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                ]
+            }
+        },
+        "attribute": "minecraft:generic.attack_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base",
+                "value": 0.05
+            }
+        ]
+    },
+    "axe_speed_2": {
+        "type": "origins:modify_attribute",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_axe"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 2
+                    }
+                ]
+            }
+        },
+        "attribute": "minecraft:generic.attack_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base",
+                "value": 0.1
+            }
+        ]
+    },
+    "axe_speed_3": {
+        "type": "origins:modify_attribute",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_axe"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 3
+                    }
+                ]
+            }
+        },
+        "attribute": "minecraft:generic.attack_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base",
+                "value": 0.15
+            }
+        ]
+    },
+    "axe_speed_4": {
+        "type": "origins:modify_attribute",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_axe"
+                        }
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": "==",
+                        "compare_to": 4
+                    }
+                ]
+            }
+        },
+        "attribute": "minecraft:generic.attack_speed",
+        "modifiers": [
+            {
+                "operation": "multiply_base",
+                "value": 0.2
+            }
+        ]
+    }
+}

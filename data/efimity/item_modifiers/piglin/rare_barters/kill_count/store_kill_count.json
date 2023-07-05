@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "efimity:piglin/blood_axe"
+      },
+      "ops": [
+        {
+          "source": "SelectedItem.tag.KillCount",
+          "target": "KillCount",
+          "op": "replace"
+        }
+      ]
+    }
+  ]
+  

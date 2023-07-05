@@ -1,0 +1,28 @@
+{
+    "type": "origins:action_on_callback",
+    "execute_chosen_when_orb": true,
+    "entity_action_added": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/main",
+            "layer": "origins:origin"
+        },
+        "if_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "offhand",
+            "action": {
+                "type": "origins:modify",
+                "modifier": "efimity:piglin/unbreakable_add"
+            }
+        },
+        "else_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "offhand",
+            "action": {
+                "type": "origins:modify",
+                "modifier": "efimity:piglin/unbreakable_remove"
+            }
+        }
+    }
+}

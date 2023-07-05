@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "Knox Infection"
+        },
+        "description": {
+            "text": "As Zombified Piglin infect a Villager to turn it into a Zombified Villager"
+        },
+        "icon": {
+            "item": "minecraft:zombie_villager_spawn_egg"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "infect": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/zombie",
+                        "layer": "efimity:variant"
+                    }
+                ],
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:villager"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "efimity:piglin/zombie/root"
+}

@@ -1,0 +1,8 @@
+{
+    "condition": "minecraft:inverted",
+    "term": {
+        "condition": "origins:origin",
+        "origin": "origins:empty",
+        "layer": "efimity:variant"
+    }
+}

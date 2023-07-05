@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Golden Standards"
+        },
+        "description": {
+            "text": "Become a Piglin\nGold. Gold? GOLD!"
+        },
+        "icon": {
+            "item": "minecraft:gold_ingot"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "root": {
+            "trigger": "origins:chose_origin",
+            "conditions": {
+                "origin": "efimity:piglin/main"
+            }
+        }
+    },
+    "parent": "efimity:root"
+}

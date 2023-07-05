@@ -1,0 +1,45 @@
+{
+    "display": {
+        "title": {
+            "text": "Family Benefits"
+        },
+        "description": {
+            "text": "As Piglin Hoarder trade with Piglins for better deals"
+        },
+        "icon": {
+            "item": "minecraft:gold_ingot",
+            "nbt": "{Enchantments: [{}]}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "bartering": {
+            "trigger": "minecraft:thrown_item_picked_up_by_player",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/hoarder",
+                        "layer": "efimity:variant"
+                    }
+                ],
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:piglin",
+                            "flags": {
+                                "is_baby": false
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "efimity:piglin/hoarder/root"
+}

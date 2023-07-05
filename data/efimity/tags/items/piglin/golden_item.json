@@ -1,0 +1,18 @@
+{
+  "replace": true,
+  "values": [
+	"#efimity:piglin/golden_armor",
+	"#efimity:piglin/golden_food",
+	"#efimity:piglin/golden_weapons_and_tools",
+
+	"minecraft:gold_ingot",		
+	"minecraft:gold_block",
+	"minecraft:gold_nugget",
+	"minecraft:gold_ore",
+	"minecraft:golden_horse_armor",
+	"minecraft:deepslate_gold_ore",
+	"minecraft:nether_gold_ore",
+	"minecraft:raw_gold_block",
+	"minecraft:raw_gold"
+  ]
+}

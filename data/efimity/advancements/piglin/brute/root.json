@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Temper Tantrum"
+        },
+        "description": {
+            "text": "As Piglin get taken over by Bloodlust"
+        },
+        "icon": {
+            "item": "minecraft:golden_axe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "root": {
+            "trigger": "origins:chose_origin",
+            "conditions": {
+                "origin": "efimity:piglin/variant/brute"
+            }
+        }
+    },
+    "parent": "efimity:piglin/root"
+}

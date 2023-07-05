@@ -1,0 +1,6 @@
+{
+    "function": "apoli:add_power",
+    "power": "efimity:piglin/items/unbreakable/offhand",
+    "slot": "offhand",
+    "hidden": true
+}

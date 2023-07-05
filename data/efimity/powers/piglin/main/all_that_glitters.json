@@ -1,0 +1,227 @@
+{
+	"type": "origins:multiple",
+	"hidden": false,
+	"name":"All That Glitters",
+	"description": "It is like the Golden Armor was just made for you, allowing to use it's full potential.",
+	"badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+                {
+                    "text": "Golden Armor:",
+                    "bold": false,
+                    "underlined": false
+                },
+				{
+                    "text": "\nAll Armor Pieces:",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "gray"
+                },
+				{
+					"text": "\n+80% chance to ignore Durability Damage",
+					"bold": false,
+                    "underlined": false,
+                    "color": "blue"
+				},
+                {
+                    "text": "\nHelmet and Boots:",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "gray"
+                },
+                {
+                    "text": "\n+1 Armor",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "blue"
+                },
+                {
+                    "text": "\nChestplate and Leggings:",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "gray"
+                },
+                {
+                    "text": "\n+2 Armor",
+                    "bold": false,
+                    "underlined": false,
+                    "color": "blue"
+                }
+            ]
+        }
+    ],
+	"golden_helmet_armor": {
+		"type": "origins:modify_attribute",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "extraorigins:golden_armor"
+				}
+			}
+		},
+		"attribute": "minecraft:generic.armor",
+		"modifiers": [
+			{
+				"operation": "addition",
+				"value": 1
+			}
+		]
+	},
+	"golden_chestplate_armor": {
+		"type": "origins:modify_attribute",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "extraorigins:golden_armor"
+				}
+			}
+		},
+		"attribute": "minecraft:generic.armor",
+		"modifiers": [
+			{
+				"operation": "addition",
+				"value": 2
+			}
+		]
+	},
+	"golden_leggings_armor": {
+		"type": "origins:modify_attribute",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "extraorigins:golden_armor"
+				}
+			}
+		},
+		"attribute": "minecraft:generic.armor",
+		"modifiers": [
+			{
+				"operation": "addition",
+				"value": 2
+			}
+		]
+	},
+	"golden_boots_armor": {
+		"type": "origins:modify_attribute",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "extraorigins:golden_armor"
+				}
+			}
+		},
+		"attribute": "minecraft:generic.armor",
+		"modifiers": [
+			{
+				"operation": "addition",
+				"value": 1
+			}
+		]
+	},
+	"unbreaking_head": {
+		"type": "apugli:action_on_durability_change",
+		"slot": "head",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:golden_helmet"
+			}
+		},
+		"decrease_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:equipped_item_action",
+				"equipment_slot": "head",
+				"action": {
+					"type": "origins:damage",
+					"amount": -1,
+					"ignore_unbreaking": true
+				}
+			},
+			"chance": 0.80
+		}
+	},
+	"unbreaking_chest": {
+		"type": "apugli:action_on_durability_change",
+		"slot": "chest",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:golden_chestplate"
+			}
+		},
+		"decrease_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:equipped_item_action",
+				"equipment_slot": "chest",
+				"action": {
+					"type": "origins:damage",
+					"amount": -1,
+					"ignore_unbreaking": true
+				}
+			},
+			"chance": 0.80
+		}
+	},
+	"unbreaking_legs": {
+		"type": "apugli:action_on_durability_change",
+		"slot": "legs",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:golden_leggings"
+			}
+		},
+		"decrease_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:equipped_item_action",
+				"equipment_slot": "legs",
+				"action": {
+					"type": "origins:damage",
+					"amount": -1,
+					"ignore_unbreaking": true
+				}
+			},
+			"chance": 0.80
+		}
+	},
+	"unbreaking_feet": {
+		"type": "apugli:action_on_durability_change",
+		"slot": "feet",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:golden_boots"
+			}
+		},
+		"decrease_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:equipped_item_action",
+				"equipment_slot": "feet",
+				"action": {
+					"type": "origins:damage",
+					"amount": -1,
+					"ignore_unbreaking": true
+				}
+			},
+			"chance": 0.80
+		}
+	}
+}

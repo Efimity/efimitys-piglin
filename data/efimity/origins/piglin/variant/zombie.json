@@ -1,0 +1,15 @@
+{
+	"name": "§2Zombified Piglin",
+	"description": "Aghhh..",
+    "unchoosable": true,
+	"icon": {
+		"item": "minecraft:rotten_flesh"
+	},
+	"impact": 0,
+	"powers": [
+		"efimity:piglin/variant/zombie/undead",
+		"efimity:piglin/variant/zombie/carnivore",
+		"efimity:piglin/variant/zombie/healing",
+		"efimity:piglin/variant/zombie/sounds"
+	]
+}

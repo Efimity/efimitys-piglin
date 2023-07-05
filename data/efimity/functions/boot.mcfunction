@@ -1,0 +1,1 @@
+scoreboard objectives add blood_axe_kill_count dummy

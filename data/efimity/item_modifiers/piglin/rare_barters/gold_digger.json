@@ -1,0 +1,50 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{Piglin: {heirloom: {gold_digger:1b}}, Unbreakable: 1b}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Gold Digger",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "translate": "enchantment.minecraft.loyalty",
+                "color": "red",
+                "italic": false,
+                "bold": false,
+                "extra": [
+                    {
+                        "text": " -"
+                    },
+                    {
+                        "translate": "enchantment.level.1"
+                    }
+                ]
+            }
+        ],
+        "replace": true
+    },
+    {
+        "function": "minecraft:enchant_with_levels",
+        "levels": {
+            "min": 30,
+            "max": 50
+        },
+        "treasure": false
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "efimity:piglin/items/rare_barters/gold_digger",
+        "slot": "mainhand",
+        "hidden": true
+    }
+]

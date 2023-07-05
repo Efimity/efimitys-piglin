@@ -1,0 +1,24 @@
+{
+    "display": {
+        "title": {
+            "text": "Public Enemy"
+        },
+        "description": {
+            "text": "As Piglin Brute kill 50 entities without losing your Bloodlust"
+        },
+        "icon": {
+            "item": "minecraft:redstone",
+            "nbt": "{Enchantments: [{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "enemy": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "efimity:piglin/brute/root"
+}

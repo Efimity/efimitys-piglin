@@ -1,0 +1,30 @@
+{
+    "type": "origins:simple",
+    "name":"§rBrutified",
+    "description": "Blood, is sweet... Violence... is a must. Your rage intensifies.",
+    "badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": {
+				"text": "Brutified Attributes:                      ",
+				"extra": [
+					{
+						"text": "",
+						"color": "green",
+						"extra": [
+							"\n+1 Attack Damage                     "
+						]
+					},
+					{
+						"text": "",
+						"color": "red",
+						"extra": [
+							"\n+10% Damage Taken                    "
+						]
+					}
+				]
+			}
+		}
+	]
+}

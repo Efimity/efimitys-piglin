@@ -1,0 +1,47 @@
+{
+    "name": "Origin Variant",
+    "missing_name": "No Origin Variant",
+    "missing_description": "You can select one by clicking \"Choose\"",
+    "enabled": true,
+    "hidden": false,
+    "order": 2,
+    "auto_choose": true,
+    "allow_random": false,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "cyra:morphling/7_combined/main",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "cyra:morphling/7_combined/variant/water",
+                "cyra:morphling/7_combined/variant/fire",
+                "cyra:morphling/7_combined/variant/end"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "efimity:piglin/main",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "efimity:piglin/variant/hoarder",
+                "efimity:piglin/variant/brute",
+                "efimity:piglin/variant/zombie"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "efimity:floran/main",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "efimity:floran/variant/flourished",
+                "efimity:floran/variant/dried"
+            ]
+        }
+    ]
+}

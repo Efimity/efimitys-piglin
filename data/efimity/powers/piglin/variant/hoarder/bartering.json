@@ -1,0 +1,8 @@
+{
+    "name":"Golden Offers",
+    "description": "As being part of their kin, Piglins offer you better items while bartering. Even some heirlooms that they wouldn't give to anyone but other Piglins.",
+    "type": "origins:replace_loot_table",
+    "replace": {
+        "minecraft:gameplay/piglin_bartering": "efimity:piglin/piglin_bartering"
+    }
+}

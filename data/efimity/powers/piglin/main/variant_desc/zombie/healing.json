@@ -1,0 +1,75 @@
+{
+    "type": "origins:simple",
+    "name":"§rHealing",
+    "description": "You might be zombified but you can heal from it using Magical Properties of Golden Foods.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Golden Food Preservation:",
+                "extra": [
+                    {
+                        "text": "\nWhile preserved you will slowly heal any zombification, takes 5 minutes to fully heal, and you won't zombify outside of Nether, Preservation timer only ticks down if you are outside of Nether and while healing Zombification.",
+                        "color": "green"
+                    },
+                    {
+                        "text": "\nGolden Carrot:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives +2 Minutes and 8 Seconds of Preservation up to 8 Minutes and 30 Seconds"
+                        ]
+                    },
+                    {
+                        "text": "",
+                        "color": "yellow",
+                        "extra": [
+                            "\nCan be eaten while not hungry but you won't get any saturation from it"
+                        ]
+                    },
+                    {
+                        "text": "\nGolden Apple:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives +4 Minutes and 16 Seconds of Preservation up to 30 Minutes",
+                            "\nHeals a bit of Zombification Instantly"
+                        ]
+                    },
+                    {
+                        "text": "\nEnchanted Golden Apple:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nGives 30 Minutes of Preservation",
+                            "\nCompletely Heals Zombification"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "",
+                "extra": [
+                    {
+                        "text": "If you are not preserved you will lose your progress of healing from Zombification",
+                        "color": "red"
+                    }
+                ]
+            }
+        }
+    ]
+}

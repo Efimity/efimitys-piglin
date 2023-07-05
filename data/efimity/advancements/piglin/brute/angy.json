@@ -1,0 +1,73 @@
+{
+    "display": {
+        "title": {
+            "text": "The Brute"
+        },
+        "description": {
+            "text": "I DON'T HAVE ANGER MANAGEMENT ISSUES, ",
+            "extra": [
+                {
+                    "text": "YOU DO!",
+                    "bold": true
+                }
+            ]
+        },
+        "icon": {
+            "item": "minecraft:golden_axe",
+            "nbt": "{Enchantments: [{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "kill_origin_brute": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/brute",
+                        "layer": "efimity:variant"
+                    }
+                ],
+                "entity": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/brute",
+                        "layer": "efimity:variant"
+                    }
+                ]
+            }
+        },
+        "kill_piglin_brute": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/brute",
+                        "layer": "efimity:variant"
+                    }
+                ],
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:piglin_brute"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "kill_origin_brute",
+            "kill_piglin_brute"
+        ]
+    ],
+    "parent": "efimity:piglin/brute/root"
+}

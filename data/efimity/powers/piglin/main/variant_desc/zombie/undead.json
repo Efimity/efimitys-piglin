@@ -1,0 +1,49 @@
+{
+    "type": "origins:simple",
+    "name":"§rZombified",
+    "description": "Being away from your home caused you to zombify. You are an undead now.",
+    "badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": {
+				"text": "Zombified Attributes:",
+				"extra": [
+					{
+						"text": "",
+						"color": "green",
+						"extra": [
+							"\n+2 Armor",
+							"\n+6 Armor Toughness",
+							"\nCan't Drown",
+							"\nYou heal from Instant Damage Status Effect",
+							"\nImmune to Poison Status Effect",
+                            "\nYou are immune to all types of Fire Damage",
+                            "\nCan see better under Lava",
+							"\nKilling Villagers with Melee makes them turn into Zombie Villagers"
+						]
+					},
+					{
+						"text": "",
+						"color": "yellow",
+						"extra": [
+							"\nYour body has a green tint"
+						]
+					},
+					{
+						"text": "",
+						"color": "red",
+						"extra": [
+							"\n-20% Movement Speed",
+							"\n-20% Mining Speed",
+							"\n-15% Attack Speed",
+                            "\nInstant Health Status Effect damages you",
+                            "\nRegeneration Status Effect has no effect on you",
+                            "\nExtra Damage Taken from Smite Enchantment"
+						]
+					}
+				]
+			}
+		}
+	]
+}

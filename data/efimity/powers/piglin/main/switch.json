@@ -1,0 +1,807 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "respawn":{
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bloodlust",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_heal",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_zombify",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_preserve",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s efimity:variant efimity:piglin/variant/hoarder"
+                }
+            ]
+        }
+    },
+    "zombify": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 25200,
+        "start_value": 0,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 18,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/brute",
+                                "layer": "efimity:variant"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_zombify",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s efimity:variant efimity:piglin/variant/zombie"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_zombify",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombie.infect",
+                    "volume": 1.0,
+                    "pitch": 1.0
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bloodlust",
+                    "operation": "set",
+                    "change": 0
+                }
+            ]
+        }
+    },
+    "heal": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 25200,
+        "start_value": 0,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 18,
+            "inverted": true,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "efimity:piglin/variant/zombie",
+                        "layer": "efimity:variant"
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_heal",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        },
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s efimity:variant efimity:piglin/variant/hoarder"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_heal",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombie_villager.converted",
+                    "volume": 1,
+                    "pitch": 1
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_bloodlust",
+                    "operation": "set",
+                    "change": 0
+                }
+            ]
+        }
+    },
+    "preserve": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 25200,
+        "start_value": 0,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 0,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_preserve",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "bloodlust": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 25200,
+        "start_value": 0,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/brute",
+                                "layer": "efimity:variant"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:resource",
+                        "resource": "*:*_bloodlust",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                ]
+            }
+        }
+    },
+    "bloodlust_grace": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "golden_carrot_always_edible":{
+        "type": "apugli:edible_item",
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">=",
+            "compare_to": 20.0
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_carrot"
+            }
+        },
+        "food_component": {
+            "hunger": 0,
+            "saturation": 0,
+            "meat": false,
+            "snack": false,
+            "always_edible": true
+        },
+        "use_action": "eat"
+    },
+    "preserve_golden_carrots": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "condition": {
+                                "type": "origins:resource",
+                                "resource": "*:*_preserve",
+                                "comparison": "<",
+                                "compare_to": 5400
+                            },
+                            "action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_preserve",
+                                "operation": "add",
+                                "change": 1800
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_preserve",
+                                        "comparison": ">=",
+                                        "compare_to": 5400
+                                    },
+                                    {
+                                        "type": "origins:resource",
+                                        "resource": "*:*_preserve",
+                                        "comparison": "<",
+                                        "compare_to": 7200
+                                    }
+                                ]
+                            },
+                            "action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_preserve",
+                                "operation": "set",
+                                "change": 7200
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombie_villager.cure",
+                    "volume": 0.1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_carrot"
+            }
+        }
+    },
+    "preserve_golden_apple": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_preserve",
+                    "operation": "add",
+                    "change": 3600
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/brute",
+                                "layer": "efimity:variant"
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_zombify",
+                        "operation": "add",
+                        "change": -3600
+                    },
+                    "else_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_heal",
+                        "operation": "add",
+                        "change": 3600
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombie_villager.cure",
+                    "volume": 0.2,
+                    "pitch": 1
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_apple"
+            }
+        }
+    },
+    "preserve_egolden_apple": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_preserve",
+                    "operation": "add",
+                    "change": 25200
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/hoarder",
+                                "layer": "efimity:variant"
+                            },
+                            {
+                                "type": "origins:origin",
+                                "origin": "efimity:piglin/variant/brute",
+                                "layer": "efimity:variant"
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_zombify",
+                        "operation": "add",
+                        "change": -25200
+                    },
+                    "else_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_heal",
+                        "operation": "add",
+                        "change": 25200
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.zombie_villager.converted",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:enchanted_golden_apple"
+            }
+        }
+    },
+    "action_over_time_zombify": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "efimity:piglin/variant/hoarder",
+                        "layer": "efimity:variant"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "efimity:piglin/variant/brute",
+                        "layer": "efimity:variant"
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_nether",
+                    "inverted": true
+                },
+                "if_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:if_else",
+                            "condition": {
+                                "type": "origins:resource",
+                                "resource": "*:*_preserve",
+                                "comparison": ">",
+                                "compare_to": 0
+                            },
+                            "if_action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:if_else",
+                                        "condition": {
+                                            "type": "origins:resource",
+                                            "resource": "*:*_zombify",
+                                            "comparison": ">",
+                                            "compare_to": 0
+                                        },
+                                        "if_action": {
+                                            "type": "origins:change_resource",
+                                            "resource": "*:*_zombify",
+                                            "operation": "add",
+                                            "change": -336
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:change_resource",
+                                        "resource": "*:*_preserve",
+                                        "operation": "add",
+                                        "change": -28
+                                    }
+                                ]
+                            },
+                            "else_action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_zombify",
+                                "operation": "add",
+                                "change": 168
+                            }
+                        },
+                        {
+                            "type": "origins:if_else",
+                            "condition": {
+                                "type": "origins:food_level",
+                                "comparison": ">",
+                                "compare_to": 6
+                            },
+                            "if_action": {
+                                "type": "origins:exhaust",
+                                "amount": 0.25
+                            }
+                        }
+                    ]
+                },
+                "else_action": {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_preserve",
+                                "comparison": ">",
+                                "compare_to": 0
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:*_zombify",
+                                "comparison": ">",
+                                "compare_to": 0
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_zombify",
+                                "operation": "add",
+                                "change": -336
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_preserve",
+                                "operation": "add",
+                                "change": -28
+                            }
+                        ]
+                    }
+                }
+            },
+            "else_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:resource",
+                    "resource": "*:*_preserve",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                "if_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:if_else",
+                            "condition": {
+                                "type": "origins:resource",
+                                "resource": "*:*_heal",
+                                "comparison": "<",
+                                "compare_to": 25200
+                            },
+                            "if_action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_heal",
+                                "operation": "add",
+                                "change": 168
+                            }
+                        },
+                        {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_preserve",
+                            "operation": "add",
+                            "change": -28
+                        }
+                    ]
+                },
+                "else_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_heal",
+                    "operation": "add",
+                    "change": -336
+                }
+            }
+        }
+    },
+    "action_over_time_bloodlust": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:origin",
+                    "origin": "efimity:piglin/variant/hoarder",
+                    "layer": "efimity:variant"
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "efimity:piglin/variant/brute",
+                    "layer": "efimity:variant"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_bloodlust_grace",
+                "comparison": ">",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_bloodlust_grace",
+                "operation": "add",
+                "change": -1
+            },
+            "else_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "efimity:piglin/variant/brute",
+                    "layer": "efimity:variant"
+                },
+                "if_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:if_else",
+                            "condition": {
+                                "type": "origins:resource",
+                                "resource": "*:*_bloodlust",
+                                "comparison": "<=",
+                                "compare_to": 336
+                            },
+                            "if_action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "origin set @s efimity:variant efimity:piglin/variant/hoarder"
+                                    },
+                                    {
+                                        "type": "origins:change_resource",
+                                        "resource": "*:*_bloodlust",
+                                        "operation": "add",
+                                        "change": -336
+                                    }
+                                ]
+                            },
+                            "else_action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_bloodlust",
+                                "operation": "add",
+                                "change": -336
+                            }
+                        }
+                    ]
+                },
+                "else_action": {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_bloodlust",
+                        "comparison": ">",
+                        "compare_to": 0
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_bloodlust",
+                        "operation": "add",
+                        "change": -672
+                    }
+                }
+            }
+        }
+    },
+    "bloodlust_increase": {
+        "type": "apugli:action_on_harm",
+        "cooldown": 10,
+        "amount_to_trigger": 1.0,
+        "overflow": true,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_axe"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:origin",
+                            "origin": "efimity:piglin/variant/hoarder",
+                            "layer": "efimity:variant"
+                        },
+                        {
+                            "type": "origins:origin",
+                            "origin": "efimity:piglin/variant/brute",
+                            "layer": "efimity:variant"
+                        }
+                    ]
+                }
+            ]
+        },
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:amount",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:living"
+                    },
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "efimity:constructs",
+                        "inverted": true
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_bloodlust_grace",
+                        "operation": "set",
+                        "change": 5
+                    }
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:actor_condition",
+                        "condition": {
+                            "type": "origins:origin",
+                            "origin": "efimity:piglin/variant/hoarder",
+                            "layer": "efimity:variant"
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:if_else",
+                            "condition": {
+                                "type": "origins:resource",
+                                "resource": "*:*_bloodlust",
+                                "comparison": ">=",
+                                "compare_to": 25074
+                            },
+                            "if_action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:change_resource",
+                                        "resource": "*:*_bloodlust",
+                                        "operation": "add",
+                                        "change": 126
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "origin set @s efimity:variant efimity:piglin/variant/brute"
+                                    }
+                                ]
+                            },
+                            "else_action": {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_bloodlust",
+                                "operation": "add",
+                                "change": 126
+                            }
+                        }
+                    },
+                    "else_action": {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_bloodlust",
+                            "operation": "add",
+                            "change": 126
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

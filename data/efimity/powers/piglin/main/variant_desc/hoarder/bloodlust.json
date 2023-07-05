@@ -1,0 +1,35 @@
+{
+    "type": "origins:simple",
+    "name": "§rBloodlust",
+    "description": "Golden axe, your companion, damaging and killing with it feeds your need for blood, as you kill your hunger for blood only grows.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Damaging entities with Golden Axe feeds your Bloodlust depending on the Damage you deal:",
+                "extra": [
+                    {
+                        "text": "\nHoarder Bloodlust Effects:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+0%-10% Attack Damage",
+                            "\n+0%-10% Movement Speed"
+                        ]
+                    },
+                    {
+                        "text": "",
+                        "color": "dark_red",
+                        "extra": [
+                            "\nAt Maximum Bloodlust turn into Brute form temporarily"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

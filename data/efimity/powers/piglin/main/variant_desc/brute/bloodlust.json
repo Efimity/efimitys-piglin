@@ -1,0 +1,55 @@
+{
+    "type": "origins:simple",
+    "name": "§rGolden Axe",
+    "description": "Your bloodlust, this weapon is the materialized form of your rage. You must feed it. More blood, more power.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Golden Axe:                                      ",
+                "extra": [
+                    {
+                        "text": "\nUnbreaking:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+5% Attack Speed increase per level"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": {
+                "text": "Damaging entities with Golden Axe feeds your Bloodlust depending on the Damage you deal:",
+                "extra": [
+                    {
+                        "text": "\nBrute Bloodlust Effects:",
+                        "color": "gray"
+                    },
+                    {
+                        "text": "",
+                        "color": "blue",
+                        "extra": [
+                            "\n+0%-25% Attack Damage",
+                            "\n+0%-25% Movement Speed"
+                        ]
+                    },
+                    {
+                        "text": "",
+                        "color": "green",
+                        "extra": [
+                            "\nAt Minimum Bloodlust turn back into Hoarder form"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

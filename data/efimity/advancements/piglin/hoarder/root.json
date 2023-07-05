@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "Golden Addiction"
+        },
+        "description": {
+            "text": "Shiny"
+        },
+        "icon": {
+            "item": "minecraft:golden_pickaxe"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "root": {
+            "trigger": "origins:chose_origin",
+            "conditions": {
+                "origin": "efimity:piglin/variant/hoarder"
+            }
+        }
+    },
+    "parent": "efimity:piglin/root"
+}

@@ -1,0 +1,519 @@
+{
+    "type": "minecraft:barter",
+    "pools": [
+        {
+            "rolls": 1.0,
+            "bonus_rolls": 0.0,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "weight": 6,
+                    "name": "minecraft:golden_hoe",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Piglin: {heirloom: {gold_digger:1b}}, Unbreakable: 1b}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "text": "Gold Digger",
+                                "color": "gold",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "translate": "enchantment.minecraft.loyalty",
+                                    "color": "red",
+                                    "italic": false,
+                                    "bold": false,
+                                    "extra": [
+                                        {
+                                            "text": " -"
+                                        },
+                                        {
+                                            "translate": "enchantment.level.1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "replace": true
+                        },
+                        {
+                            "function": "minecraft:enchant_with_levels",
+                            "levels": {
+                                "min": 30,
+                                "max": 50
+                            },
+                            "treasure": false
+                        },
+                        {
+                            "function": "apoli:add_power",
+                            "power": "efimity:piglin/items/rare_barters/gold_digger",
+                            "slot": "mainhand",
+                            "hidden": true
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 6,
+                    "name": "minecraft:golden_helmet",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Piglin: {heirloom: {piglin_crown:1b}}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "text": "Piglin Crown",
+                                "color": "gold",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "A Crown that used to hold immense power",
+                                    "color": "gold",
+                                    "italic": false,
+                                    "bold": false
+                                }
+                            ],
+                            "replace": true
+                        },
+                        {
+                            "function": "minecraft:enchant_with_levels",
+                            "levels": {
+                                "min": 30,
+                                "max": 50
+                            },
+                            "treasure": false
+                        },
+                        {
+                            "function": "apoli:add_power",
+                            "power": "efimity:piglin/items/rare_barters/piglin_crown",
+                            "slot": "head",
+                            "hidden": true
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "weight": 6,
+                    "name": "minecraft:golden_axe",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_enchantments",
+                            "enchantments": {
+                                "minecraft:sharpness": 5
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "text": "Blood Axe",
+                                "color": "gold",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "entity": "this",
+                            "lore": [
+                                {
+                                    "text": "Kill for me, Kill for the Blood God",
+                                    "color": "#FF0000",
+                                    "italic": false,
+                                    "bold": false
+                                },
+                                [
+                                    {
+                                        "text": "Sacrifices: ",
+                                        "color": "#DF3C3C",
+                                        "bold": false,
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "0",
+                                        "color": "#DF3C3C",
+                                        "bold": false,
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "replace": true
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Piglin: {heirloom: {blood_axe:1b}}, KillCount:0b, Unbreakable: 1b}"
+                        },
+                        {
+                            "function": "apoli:add_power",
+                            "power": "efimity:piglin/items/rare_barters/blood_axe",
+                            "slot": "mainhand",
+                            "hidden": true
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_potion",
+                            "id": "minecraft:long_fire_resistance"
+                        }
+                    ],
+                    "name": "minecraft:potion",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_potion",
+                            "id": "minecraft:long_fire_resistance"
+                        }
+                    ],
+                    "name": "minecraft:splash_potion",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:enchant_randomly",
+                            "enchantments": [
+                                "minecraft:soul_speed"
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:book",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:enchant_randomly",
+                            "enchantments": [
+                                "minecraft:soul_speed"
+                            ]
+                        }
+                    ],
+                    "name": "minecraft:iron_boots",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_potion",
+                            "id": "minecraft:water"
+                        }
+                    ],
+                    "name": "minecraft:potion",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 6.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:iron_ingot",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 8.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:ender_pearl",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 8.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:nether_wart",
+                    "weight": 100
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 18.0,
+                                "min": 6.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:string",
+                    "weight": 200
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 24.0,
+                                "min": 10.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:quartz",
+                    "weight": 200
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 4.0,
+                                "min": 2.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:glowstone",
+                    "weight": 200
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 8.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:magma_block",
+                    "weight": 200
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 3.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:shroomlight",
+                    "weight": 200
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 3.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:obsidian",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 6.0,
+                                "min": 2.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:crying_obsidian",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 3.0,
+                                "min": 1.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:fire_charge",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 8.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:leather",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 16.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:soul_sand",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 16.0,
+                                "min": 4.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:nether_brick",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 24.0,
+                                "min": 12.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:spectral_arrow",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 32.0,
+                                "min": 16.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:gravel",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 32.0,
+                                "min": 16.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:blackstone",
+                    "weight": 400
+                },
+                {
+                    "type": "minecraft:item",
+                    "functions": [
+                        {
+                            "add": false,
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "max": 6.0,
+                                "min": 2.0
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:crimson_stem",
+                    "weight": 400
+                }
+            ]
+        }
+    ]
+}

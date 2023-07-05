@@ -1,0 +1,19 @@
+{
+    "type": "origins:modify_projectile_damage",
+    "name": "Crossbow Master",
+    "description": "You deal 75% more damage using crossbows.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Does not effect Firework Rocket damage"
+        }
+    ],
+    "damage_condition": {
+        "type": "extraorigins:crossbow_arrow"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.75
+    }
+}

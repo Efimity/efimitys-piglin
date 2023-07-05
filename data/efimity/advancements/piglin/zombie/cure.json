@@ -1,0 +1,37 @@
+{
+    "display": {
+        "title": {
+            "text": "The Ultimate Cure"
+        },
+        "description": {
+            "text": "As Zombified Piglin consume an Enchanted Golden Apple to instantly revert your Zombification"
+        },
+        "icon": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "cure": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/variant/zombie",
+                        "layer": "efimity:variant"
+                    }
+                ],
+                "item": {
+                    "items": [
+                        "minecraft:enchanted_golden_apple"
+                    ]
+                }
+            }
+        }
+    },
+    "parent": "efimity:piglin/zombie/root"
+}

@@ -1,0 +1,699 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "piglin_can_smith": {
+        "type": "origins:tooltip",
+        "order": 34,
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons_and_tools"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Piglin:{smith:1b}}",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Piglin:{heirloom:{}}}",
+                    "inverted": true
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Golden Smith:",
+                "color": "gray"
+            },
+            {
+                "text": "Right Click With a Gold Ingot",
+                "color": "gold"
+            }
+        ]
+    },
+    "piglin_smithed": {
+        "type": "origins:tooltip",
+        "order": 34,
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons_and_tools"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Piglin:{smith:1b}}"
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Golden Smith:",
+                "color": "gray"
+            },
+            {
+                "text": "Unbreakable for Piglins",
+                "color": "blue"
+            }
+        ]
+    },
+    "piglin_weapons": {
+        "type": "origins:tooltip",
+        "order": 30,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_weapons"
+            }
+        },
+        "texts": [
+            {
+                "text": "Golden Weapons:",
+                "color": "gray"
+            },
+            {
+                "text": "+2 Attack Damage",
+                "color": "blue"
+            }
+        ]
+    },
+    "piglin_harvest": {
+        "type": "origins:tooltip",
+        "order": 33,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_pickaxe"
+            }
+        },
+        "texts": [
+            {
+                "text": "Golden Harvest:",
+                "color": "gray"
+            },
+            {
+                "text": "Can break everything that a Diamond Pickaxe can",
+                "color": "blue"
+            }
+        ]
+    },
+    "piglin_armor_helmet_and_boots": {
+        "type": "origins:tooltip",
+        "order": 30,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_armor_1_armor"
+            }
+        },
+        "texts": [
+            {
+                "text": "All That Glitters:",
+                "color": "gray"
+            },
+            {
+                "text": "+1 Armor",
+                "color": "blue"
+            },
+            {
+                "text": "+80% chance to ignore durability damage",
+                "color": "blue"
+            }
+        ]
+    },
+    "piglin_armor_chestplate_and_leggings": {
+        "type": "origins:tooltip",
+        "order": 30,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_armor_2_armor"
+            }
+        },
+        "texts": [
+            {
+                "text": "All That Glitters:",
+                "color": "gray"
+            },
+            {
+                "text": "+2 Armor",
+                "color": "blue"
+            },
+            {
+                "text": "+80% chance to ignore Durability Damage",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_main": {
+        "type": "origins:tooltip",
+        "order": 31,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons_and_tools"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Midas' Touch:",
+                "color": "gray"
+            }
+        ]
+    },
+    "hoarder_midas_tool_mining_speed_1": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_tools"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+33% Mining Speed from Unbreaking I",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_tool_mining_speed_2": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_tools"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+66% Mining Speed from Unbreaking II",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_tool_mining_speed_3": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_tools"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+99% Mining Speed from Unbreaking III",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_tool_mining_speed_4": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_tools"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+132% Mining Speed from Unbreaking IV",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_weapon_attack_speed_1": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+5% Attack Speed from Unbreaking I",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_weapon_attack_speed_2": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+10% Attack Speed from Unbreaking II",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_weapon_attack_speed_3": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+15% Attack Speed from Unbreaking III",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_midas_weapon_attack_speed_4": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/hoarder",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "efimity:piglin/golden_weapons"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+20% Attack Speed from Unbreaking IV",
+                "color": "blue"
+            }
+        ]
+    },
+    "brute_axe_main": {
+        "type": "origins:tooltip",
+        "order": 31,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/brute",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_axe"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Golden Axe:",
+                "color": "gray"
+            }
+        ]
+    },
+    "brute_axe_attack_speed_1": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/brute",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_axe"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+5% Attack Speed from Unbreaking I",
+                "color": "blue"
+            }
+        ]
+    },
+    "brute_axe_attack_speed_2": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/brute",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_axe"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+10% Attack Speed from Unbreaking II",
+                "color": "blue"
+            }
+        ]
+    },
+    "brute_axe_attack_speed_3": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/brute",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_axe"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+15% Attack Speed from Unbreaking III",
+                "color": "blue"
+            }
+        ]
+    },
+    "brute_axe_attack_speed_4": {
+        "type": "origins:tooltip",
+        "order": 32,
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/brute",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:golden_axe"
+                    }
+                },
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:unbreaking",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "+20% Attack Speed from Unbreaking IV",
+                "color": "blue"
+            }
+        ]
+    },
+    "hoarder_and_brute_armor_speed": {
+        "type": "origins:tooltip",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:origin",
+                    "origin": "efimity:piglin/variant/brute",
+                    "layer": "efimity:variant"
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "efimity:piglin/variant/hoarder",
+                    "layer": "efimity:variant"
+                }
+            ]
+        },
+        "order": 31,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_armor"
+            }
+        },
+        "texts": [
+            {
+                "text": "Golden Motivation:",
+                "color": "gray"
+            },
+            {
+                "text": "+6% Movement Speed",
+                "color": "blue"
+            }
+        ]
+    },
+    "zombie_carnivore": {
+        "type": "origins:tooltip",
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/variant/zombie",
+            "layer": "efimity:variant"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "origins:meat"
+                    },
+                    "inverted": true
+                },
+                {
+                    "type": "origins:food"
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Carnivore:",
+                "color": "gray"
+            },
+            {
+                "text": "-75% Hunger",
+                "color": "red"
+            },
+            {
+                "text": "No Saturation",
+                "color": "red"
+            }
+        ]
+    },
+    "piglin_crown":{
+        "type": "origins:tooltip",
+        "order": 34,
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Piglin:{heirloom:{piglin_crown:1b}}}"
+                }
+            ]
+        },
+        "texts": [
+            {
+                "text": "Piglin Crown:",
+                "color": "gray"
+            },
+            {
+                "text": "Unbreakable for Piglins",
+                "color": "blue"
+            }
+        ]
+    }
+}

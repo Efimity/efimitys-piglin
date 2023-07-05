@@ -1,0 +1,21 @@
+{
+	"name": "§cBrute",
+	"description": "Violence is always the answer.",
+    "unchoosable": true,
+	"icon": {
+		"item": "minecraft:golden_axe"
+	},
+	"impact": 0,
+	"powers": [
+		"efimity:piglin/variant/brute/brutified",
+		"efimity:piglin/variant/brute/bloodlust",
+		"efimity:piglin/variant/brute/armor_speed",
+		"efimity:piglin/variant/brute/flabby",
+		"efimity:piglin/variant/brute/zombify",
+		"efimity:piglin/variant/brute/second_chance",
+		"efimity:piglin/variant/brute/sounds",
+
+		"efimity:piglin/advancements/variant/brute/public_enemy"
+		
+	]
+}

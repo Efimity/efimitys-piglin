@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "origins:origin",
+            "origin": "cyra:dragonkin/base",
+            "layer": "origins:origin"
+        },
+        {
+            "condition": "origins:origin",
+            "origin": "cyra:dragonkin/fullblood",
+            "layer": "origins:origin"
+        }
+    ]
+}

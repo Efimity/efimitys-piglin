@@ -1,0 +1,46 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "unbreakable": {
+        "type": "origins:action_on_callback",
+        "execute_chosen_when_orb": true,
+        "entity_action_added": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:origin",
+                "origin": "efimity:piglin/main",
+                "layer": "origins:origin"
+            },
+            "if_action": {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "head",
+                "action": {
+                    "type": "origins:modify",
+                    "modifier": "efimity:piglin/unbreakable_add"
+                }
+            },
+            "else_action": {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "head",
+                "action": {
+                    "type": "origins:modify",
+                    "modifier": "efimity:piglin/unbreakable_remove"
+                }
+            }
+        }
+    },
+    "particles":{
+        "type": "origins:particle",
+        "frequency": 4,
+        "visible_in_first_person": false,
+        "particle": {
+            "type":"minecraft:dust_color_transition",
+            "params": "1 1 0 1 0.8 0.5 0 ~ ~ ~"
+        },
+        "condition": {
+            "type": "origins:origin",
+            "origin": "efimity:piglin/main",
+            "layer": "origins:origin"
+        }
+    }
+}

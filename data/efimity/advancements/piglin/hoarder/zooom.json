@@ -1,0 +1,54 @@
+{
+    "display": {
+        "title": {
+            "text": "Light Speed Miner"
+        },
+        "description": {
+            "text": "As Piglin obtain an Efficiency V and Unbreaking III Golden Pickaxe\n\nZooming"
+        },
+        "icon": {
+            "item": "minecraft:golden_pickaxe",
+            "nbt": "{Enchantments: [{}]}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "zooom": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "origins:origin",
+                        "origin": "efimity:piglin/main",
+                        "layer": "origins:origin"
+                    }
+                ],
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:golden_pickaxe"
+                        ],
+                        "enchantments": [
+                            {
+                                "enchantment": "minecraft:efficiency",
+                                "levels": {
+                                    "min": 5
+                                }
+                            },
+                            {
+                                "enchantment": "minecraft:unbreaking",
+                                "levels": {
+                                    "min": 3
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "efimity:piglin/hoarder/root"
+}

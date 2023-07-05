@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"order": 0,
+	"auto_choose": false,
+	"allow_random": true,
+	"allow_random_unchoosable": false,
+	"origins": [
+        "efimity:piglin/main"
+	],
+	"loading_priority": 2 
+}

@@ -1,0 +1,60 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 50,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        },
+        "max_action": {
+            "type": "origins:grant_advancement",
+            "advancement": "efimity:piglin/brute/enemy"
+        }
+    },
+    "increase":{
+        "type": "origins:action_on_hit",
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "damage_condition": {
+            "type": "origins:amount",
+            "comparison": ">=",
+            "compare_to": 1
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:health",
+                        "comparison": "==",
+                        "compare_to": 0.0
+                    }
+                }
+            ]
+        },
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "<",
+                    "compare_to": 50
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "operation": "add",
+                    "change": 1
+                }
+            }
+        }
+    }
+}
