@@ -15,7 +15,9 @@
 		"efimity:piglin/variant/brute/second_chance",
 		"efimity:piglin/variant/brute/sounds",
 
+		"efimity:piglin/variant/brute/remove_variant",
 		"efimity:piglin/advancements/variant/brute/public_enemy"
+		
 		
 	]
 }

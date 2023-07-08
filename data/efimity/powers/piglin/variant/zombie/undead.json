@@ -118,6 +118,11 @@
     },
     "slow_mining_speed":{
         "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:hardness",
+            "comparison": ">",
+            "compare_to": 0
+        },
         "modifiers": [
             {
                 "operation": "multiply_base_additive",

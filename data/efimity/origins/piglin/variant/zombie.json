@@ -10,6 +10,8 @@
 		"efimity:piglin/variant/zombie/undead",
 		"efimity:piglin/variant/zombie/carnivore",
 		"efimity:piglin/variant/zombie/healing",
-		"efimity:piglin/variant/zombie/sounds"
+		"efimity:piglin/variant/zombie/sounds",
+
+		"efimity:piglin/variant/zombie/remove_variant"
 	]
 }
