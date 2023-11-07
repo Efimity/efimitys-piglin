@@ -1,62 +1,18 @@
 {
     "type": "origins:multiple",
     "hidden": true,
-    "piglin_can_smith": {
+    "piglin_golden_care": {
         "type": "origins:tooltip",
         "order": 34,
         "item_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:ingredient",
-                    "ingredient": {
-                        "tag": "efimity:piglin/golden_weapons_and_tools"
-                    }
-                },
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{Piglin:{smith:1b}}",
-                    "inverted": true
-                },
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{Piglin:{heirloom:{}}}",
-                    "inverted": true
-                }
-            ]
-        },
-        "texts": [
-            {
-                "text": "Golden Smith:",
-                "color": "gray"
-            },
-            {
-                "text": "Right Click With a Gold Ingot",
-                "color": "gold"
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_weapons_and_tools"
             }
-        ]
-    },
-    "piglin_smithed": {
-        "type": "origins:tooltip",
-        "order": 34,
-        "item_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:ingredient",
-                    "ingredient": {
-                        "tag": "efimity:piglin/golden_weapons_and_tools"
-                    }
-                },
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{Piglin:{smith:1b}}"
-                }
-            ]
         },
         "texts": [
             {
-                "text": "Golden Smith:",
+                "text": "Golden Care:",
                 "color": "gray"
             },
             {

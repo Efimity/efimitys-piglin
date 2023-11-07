@@ -1,0 +1,22 @@
+{
+  "name": "Golden Care",
+  "description": "You know how to use golden tools with care, making them unbreakable in your hands.",
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "Golden Tools are Unbreakable."
+    }
+  ],
+  "type": "apugli:modify_durability_change",
+  "modifier": {
+    "operation": "multiply_base_additive",
+    "value": -1
+  },
+  "item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "tag": "efimity:piglin/golden_weapons_and_tools"
+    }
+  }
+}

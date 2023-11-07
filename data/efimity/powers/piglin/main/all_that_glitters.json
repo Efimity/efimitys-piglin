@@ -133,95 +133,17 @@
 		]
 	},
 	"unbreaking_head": {
-		"type": "apugli:action_on_durability_change",
-		"slot": "head",
+		"type": "apugli:modify_durability_change",
 		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"item": "minecraft:golden_helmet"
-			}
-		},
-		"decrease_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:equipped_item_action",
-				"equipment_slot": "head",
-				"action": {
-					"type": "origins:damage",
-					"amount": -1,
-					"ignore_unbreaking": true
-				}
-			},
-			"chance": 0.80
-		}
-	},
-	"unbreaking_chest": {
-		"type": "apugli:action_on_durability_change",
-		"slot": "chest",
-		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"item": "minecraft:golden_chestplate"
-			}
-		},
-		"decrease_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:equipped_item_action",
-				"equipment_slot": "chest",
-				"action": {
-					"type": "origins:damage",
-					"amount": -1,
-					"ignore_unbreaking": true
-				}
-			},
-			"chance": 0.80
-		}
-	},
-	"unbreaking_legs": {
-		"type": "apugli:action_on_durability_change",
-		"slot": "legs",
-		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"item": "minecraft:golden_leggings"
-			}
-		},
-		"decrease_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:equipped_item_action",
-				"equipment_slot": "legs",
-				"action": {
-					"type": "origins:damage",
-					"amount": -1,
-					"ignore_unbreaking": true
-				}
-			},
-			"chance": 0.80
-		}
-	},
-	"unbreaking_feet": {
-		"type": "apugli:action_on_durability_change",
-		"slot": "feet",
-		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"item": "minecraft:golden_boots"
-			}
-		},
-		"decrease_action": {
-			"type": "origins:chance",
-			"action": {
-				"type": "origins:equipped_item_action",
-				"equipment_slot": "feet",
-				"action": {
-					"type": "origins:damage",
-					"amount": -1,
-					"ignore_unbreaking": true
-				}
-			},
-			"chance": 0.80
-		}
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "efimity:piglin/golden_armor"
+            }
+        },
+		"modifier": {
+			"operation": "multiply_base_additive",
+			"value": -0.8
+		  }
+
 	}
 }

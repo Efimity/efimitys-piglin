@@ -392,10 +392,14 @@
                         "change": -25200
                     },
                     "else_action": {
-                        "type": "origins:change_resource",
-                        "resource": "*:*_heal",
-                        "operation": "add",
-                        "change": 25200
+                        "type": "origins:delay",
+                        "ticks": 1,
+                        "action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_heal",
+                            "operation": "add",
+                            "change": 25200
+                        }
                     }
                 },
                 {
